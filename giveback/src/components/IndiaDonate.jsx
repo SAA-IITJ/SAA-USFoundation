@@ -303,7 +303,7 @@ const ChequeTab = () => {
             <p>Phone: +91-291-2801036</p>
           </div>
           <p className="mb-4">
-            Please send scanned copy of Cheque at dora_desk@iitk.ac.in
+            Please send scanned copy of Cheque at dora_desk@iitj.ac.in
           </p>
           <div className="bg-gray-100 p-2 text-center mb-4">
             Annual-Gift-Programme

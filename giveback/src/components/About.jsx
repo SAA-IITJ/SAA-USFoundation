@@ -28,7 +28,7 @@ const dummyData = [
   },
   {
     name: "Mr. Kapil Kaul",
-    title: "CEO- IITK Development Foundation",
+    title: "CEO- IITJ Development Foundation",
     education: "B.Com, MBA (Univ of Mumbai)",
     image: "https://placehold.co/600x400"
   },
@@ -74,11 +74,11 @@ const dummyData = [
 // Section components
 const AboutUs = () => (
   <p className="text-sm leading-relaxed text-justify ">
-    The Indian Institute of Technology Kanpur Foundation (henceforth referred to as "Foundation" / "IIT Kanpur
-    Foundation" / "IITK Foundation" / "IITKF") was established "to mobilize alumni, enhance IIT Kanpur branding, provide
-    alumni services and raise funds for the betterment of Indian Institute of Technology Kanpur, India". The exact
-    definition of the purpose can be refined by the IIT Kanpur Foundation Board by a Board Resolution so long as the
-    PURPOSE is ONLY in the context of betterment of IIT Kanpur or alumni located worldwide. The Foundation received
+    The Indian Institute of Technology Jodhpur Foundation (henceforth referred to as "Foundation" / "IIT Jodhpur
+    Foundation" / "IITJ Foundation" / "IITJF") was established "to mobilize alumni, enhance IIT Jodhpur branding, provide
+    alumni services and raise funds for the betterment of Indian Institute of Technology Jodhpur, India". The exact
+    definition of the purpose can be refined by the IIT Jodhpur Foundation Board by a Board Resolution so long as the
+    PURPOSE is ONLY in the context of betterment of IIT Jodhpur or alumni located worldwide. The Foundation received
     its status as a 501(c)(3) tax-exempt organization from the IRS in January 2001 (EIN#: 94-3370645).
   </p>
 );
@@ -86,13 +86,13 @@ const AboutUs = () => (
 const MissionObjectives = () => (
   <div className="bg-white p-8 text-justify rounded-lg max-w-4xl mx-auto my-10">
   <p className="mb-6 text-gray-700">
-    The Foundation was established as a non-profit public benefit corporation and received its status as a tax-exempt organization from the IRS. It is organized under the Nonprofit Public Benefit Corporation Law for charitable purposes. The specific purposes for which the Foundation is organized are to fund and promote the overall betterment of students, faculty, and alumni body of the Indian Institute of Technology, Kanpur. Examples of fundraising include, but not limited to -- faculty chair funds, scholarships, equipment, research center, hostel improvement, etc.
+    The Foundation was established as a non-profit public benefit corporation and received its status as a tax-exempt organization from the IRS. It is organized under the Nonprofit Public Benefit Corporation Law for charitable purposes. The specific purposes for which the Foundation is organized are to fund and promote the overall betterment of students, faculty, and alumni body of the Indian Institute of Technology, Jodhpur. Examples of fundraising include, but not limited to -- faculty chair funds, scholarships, equipment, research center, hostel improvement, etc.
   </p>
   <p className="mb-6 text-gray-700">
-    In addition, the Foundation will also assist in improving the IIT Kanpur branding through faculty recruitment, facilitate research through academic and corporate relationships. The organization will achieve its goals by providing financial and other resources towards these initiatives.
+    In addition, the Foundation will also assist in improving the IIT Jodhpur branding through faculty recruitment, facilitate research through academic and corporate relationships. The organization will achieve its goals by providing financial and other resources towards these initiatives.
   </p>
   <p className="text-gray-700">
-    <strong>IIT Kanpur Foundation (IITKF)</strong>, <span className="text-red-500 font-semibold">IIT Kanpur Alumni Association (IITKAA)</span>, and <strong>IIT Kanpur Development Foundation (IITKDF)</strong> through various initiatives are continuing to work closely together to strengthen and grow the global network of IIT Kanpur alumni. The objective of these initiatives is to bring IIT Kanpur faculty members, alumni, and industry leaders together in assisting IIT Kanpur to realize its vision of becoming one of the world’s leading research and teaching universities.
+    <strong>IIT Jodhpur Foundation (IITJF)</strong>, <span className="text-red-500 font-semibold">IIT Jodhpur Alumni Association (IITJAA)</span>, and <strong>IIT Jodhpur Development Foundation (IITJDF)</strong> through various initiatives are continuing to work closely together to strengthen and grow the global network of IIT Jodhpur alumni. The objective of these initiatives is to bring IIT Jodhpur faculty members, alumni, and industry leaders together in assisting IIT Jodhpur to realize its vision of becoming one of the world’s leading research and teaching universities.
   </p>
 </div>
 );
@@ -114,7 +114,7 @@ const CharitablePurpose = () => (
 );
 
 const AlumniServicePurpose = () => (
-  <p className="text-sm leading-relaxed text-justify">To foster fellowship among alumni through local chapters, provide a forum for communication among alumni, disseminate continuing education about IIT Kanpur, and, provide the means for involving alumni in support of IIT Kanpur and the mission of the Foundation</p>
+  <p className="text-sm leading-relaxed text-justify">To foster fellowship among alumni through local chapters, provide a forum for communication among alumni, disseminate continuing education about IIT Jodhpur, and, provide the means for involving alumni in support of IIT Jodhpur and the mission of the Foundation</p>
 );
 
 const BoardMembers = () => (
@@ -145,13 +145,13 @@ const sections = {
   'Volunteers': Volunteers
 };
 
-const AboutIITKFoundation = () => {
+const AboutIITJFoundation = () => {
   const [activeSection, setActiveSection] = useState('About us');
   const ActiveSectionComponent = sections[activeSection];
 
   return (
     <div className="max-w-6xl mx-auto p-4 font-sans">
-      <h1 className="text-3xl font-bold text-center mb-8">ABOUT IITK FOUNDATION</h1>
+      <h1 className="text-3xl font-bold text-center mb-8">ABOUT IITJ FOUNDATION</h1>
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-1/3 bg-gray-50 p-4">
           {Object.keys(sections).map((section) => (
@@ -172,4 +172,4 @@ const AboutIITKFoundation = () => {
   );
 };
 
-export default AboutIITKFoundation;
+export default AboutIITJFoundation;

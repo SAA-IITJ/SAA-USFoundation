@@ -45,7 +45,7 @@ const Card = () => {
                             </a>
                         </div>
                         <p class="text-gray-500 text-sm sm:text-base">
-                        Your every gift to the institute brings a positive change and creates an impact. At IITK brilliant minds converge to produce path-breaking research and forge a bright future. With your generosity, you become a partner in their success. Every gift matters. Explore a way to support your alma mater in a way that works for you.
+                        Your every gift to the institute brings a positive change and creates an impact. At IITJ brilliant minds converge to produce path-breaking research and forge a bright future. With your generosity, you become a partner in their success. Every gift matters. Explore a way to support your alma mater in a way that works for you.
                         </p>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ const Card = () => {
                             </a>
                         </div>
                         <p class="text-gray-500 text-sm sm:text-base">
-                        The Indian Institute of Technology Kanpur Alumni Fund, helps to shape IITK’s today and tomorrow by providing critical funds to meet the most pressing needs of the Institute and its students. Your support helps the Institute respond to unexpected needs and ensures the Institute community remains diverse and at the forefront of higher education.
+                        The Indian Institute of Technology Jodhpur Alumni Fund, helps to shape IITJ's today and tomorrow by providing critical funds to meet the most pressing needs of the Institute and its students. Your support helps the Institute respond to unexpected needs and ensures the Institute community remains diverse and at the forefront of higher education.
                         </p>
                     </div>
                 </div>

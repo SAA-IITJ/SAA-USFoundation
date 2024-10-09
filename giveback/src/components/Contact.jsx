@@ -15,11 +15,11 @@ const ContactUs: React.FC = () => {
 
   const contactInfo: ContactInfo = {
     address: [
-      'IIT Kanpur Foundation',
+      'IIT Jodhpur Foundation',
       '3790 El Camino Real, #1038',
       'Palo Alto, CA 94306'
     ],
-    email: 'cfo@iitkfoundation.org',
+    email: 'cfo@iitjfoundation.org',
     phone: '+16505078719'
   };
 
