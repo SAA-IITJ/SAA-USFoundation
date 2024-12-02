@@ -30,14 +30,14 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 font-suse">
       <h1 className="text-4xl font-bold text-center mb-8">CONTACT US</h1>
-      <div className="h-1 w-16 bg-teal-500 mx-auto mb-12"></div>
+      <div className="h-1 w-16 bg-[#ff8c00] mx-auto mb-12"></div>
       
       <div className="flex flex-wrap -mx-4">
         <div className="w-full md:w-1/2 px-4 mb-8">
           <div className="bg-white shadow-md rounded-lg p-6 mb-6">
-            <MapPin className="w-12 h-12 text-red-500 mx-auto mb-4" />
+            <MapPin className="w-12 h-12 text-blue-500 mx-auto mb-4" />
             <h2 className="text-2xl font-semibold text-center mb-2">Our Address</h2>
             {contactInfo.address.map((line, index) => (
               <p key={index} className="text-center">{line}</p>
@@ -46,14 +46,14 @@ const ContactUs: React.FC = () => {
           <div className="flex flex-wrap -mx-2">
             <div className="w-1/2 px-2">
               <div className="bg-white shadow-md rounded-lg p-6">
-                <Mail className="w-12 h-12 text-red-500 mx-auto mb-4" />
+                <Mail className="w-12 h-12 text-blue-500 mx-auto mb-4" />
                 <h2 className="text-2xl font-semibold text-center mb-2">Email Us</h2>
                 <p className="text-center">{contactInfo.email}</p>
               </div>
             </div>
             <div className="w-1/2 px-2">
               <div className="bg-white shadow-md rounded-lg p-6">
-                <Phone className="w-12 h-12 text-red-500 mx-auto mb-4" />
+                <Phone className="w-12 h-12 text-blue-500 mx-auto mb-4" />
                 <h2 className="text-2xl font-semibold text-center mb-2">Call Us</h2>
                 <p className="text-center">{contactInfo.phone}</p>
               </div>
@@ -105,7 +105,7 @@ const ContactUs: React.FC = () => {
             </div>
             <button
               type="submit"
-              className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition duration-300"
+              className="bg-blue-700 text-white px-6 py-2 rounded hover:bg-[#000080] transition duration-300"
             >
               Send Message
             </button>

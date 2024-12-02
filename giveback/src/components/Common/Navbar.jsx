@@ -143,12 +143,12 @@ const Navbar = () => {
           <Link to="/" onClick={() => setPathname("/")}>
             <div className="flex items-center justify-between">
               <img
-                src={`${process.env.PUBLIC_URL}/assets/IIT-Jodhpur-Logo.png`}
+                src={`${process.env.PUBLIC_URL}/assets/IITJ-coloured.png`}
                 alt="logo"
-                className="h-16 md:h-16"
+                className="h-20 md:h-20"
               />
               <img
-                src={`${process.env.PUBLIC_URL}/assets/IIT-JODHPUR-1.png`}
+                src={`${process.env.PUBLIC_URL}/assets/IIT-JODHPUR-2.png`}
                 alt="logo"
                 className="h-16 md:h-12 ml-6"
               />
@@ -168,9 +168,9 @@ const Navbar = () => {
                       pathname === navItem.path ||
                       ((pathname === "/" || pathname === "") &&
                         navItem.name === "Home")
-                        ? "text-primary"
+                        ? "text-[#000080]"
                         : ""
-                    } hover:text-primary`}
+                    } hover:text-[#000080]`}
                     onMouseEnter={() => setHoveredPath(navItem.path)}
                     onMouseLeave={() => setHoveredPath("")}
                     onClick={() => setPathname(navItem.path)}
@@ -184,7 +184,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: -4 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#000080]"
                       />
                     )}
                   </AnimatePresence>
@@ -192,7 +192,7 @@ const Navbar = () => {
               ))}
               <motion.div
                 rel="noopener noreferrer"
-                className="border cursor-pointer ml-4 border-primary bg-primary py-2 px-4 md:py-3 md:px-6 uppercase font-['Montserrat'] text-sm md:text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-primary"
+                className="border cursor-pointer ml-4 border-[#000080] bg-[#000080] py-2 px-4 md:py-3 md:px-6 uppercase font-['Montserrat'] text-sm md:text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-[#000080]"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -238,7 +238,7 @@ const Navbar = () => {
                       href={navItem.path}
                       className={`py-2 font-medium text-2xl ${
                         pathname === navItem.path
-                          ? "text-primary"
+                          ? "text-[#000080]"
                           : "text-gray-600"
                       }`}
                       onClick={() => {
@@ -253,7 +253,7 @@ const Navbar = () => {
                 <motion.a
                   href="/initiatives"
                   rel="noopener noreferrer"
-                  className="border border-primary bg-primary py-2 px-4 md:py-3 md:px-6 uppercase font-['Montserrat'] text-sm md:text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-primary"
+                  className="border border-[#000080] bg-[#000080] py-2 px-4 md:py-3 md:px-6 uppercase font-['Montserrat'] text-sm md:text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-[#000080]"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

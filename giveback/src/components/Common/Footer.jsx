@@ -4,9 +4,9 @@ const Footer = () => {
     return (
         <section className="py-10 bg-white sm:pt-16 lg:pt-24">
     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
+        <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-4 gap-y-16 gap-x-12">
             <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-                <img className="w-auto h-12" src="./assets/IIT-JODHPUR-1.png" alt="" />
+                <img className="w-auto h-12" src="./assets/IIT-JODHPUR-2.png" alt="" />
 
                 <p className="text-base leading-relaxed text-gray-600 mt-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
 
@@ -58,7 +58,7 @@ const Footer = () => {
             <div>
                 <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase">Company</p>
 
-                <ul className="mt-6 space-y-4">
+                <ul className="mt-6 space-y-4 lg:ml-24">
                     <li>
                         <a href="/about" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
                     </li>
@@ -80,7 +80,7 @@ const Footer = () => {
             <div>
                 <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase">Help</p>
 
-                <ul className="mt-6 space-y-4">
+                <ul className="mt-6 space-y-4 lg:ml-28">
                     <li>
                         <a href="/contact" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact </a>
                     </li>

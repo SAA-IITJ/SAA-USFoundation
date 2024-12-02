@@ -23,7 +23,6 @@ function Main() {
       <MyCarousel />
       <WhyGive />
       <Card/>
-      <TeamSection/>
     </div>
   );
 }

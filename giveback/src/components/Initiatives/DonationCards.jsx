@@ -2,12 +2,12 @@ import React from 'react';
 
 const Card = ({ title, content, imageSrc, buttons }) => (
   <div className="bg-white shadow-md rounded-lg overflow-hidden mb-6">
-    <h2 className="text-2xl font-bold text-red-600 p-4">{title}</h2>
+    <h2 className="text-2xl font-bold text-[#000080] p-4">{title}</h2>
     <div className="flex flex-col md:flex-row">
       <div className="md:w-2/3 p-4">
         <p className="text-gray-700 text-justify">{content}</p>
         {content.length > 200 && (
-          <a href="#" className="text-red-600 hover:underline">read more..</a>
+          <a href="#" className="text-blue-500 hover:underline">read more..</a>
         )}
       </div>
       {imageSrc && (
@@ -18,7 +18,7 @@ const Card = ({ title, content, imageSrc, buttons }) => (
     </div>
     <div className="flex flex-wrap justify-around p-4">
       {buttons.map((button, index) => (
-        <button key={index} className="bg-red-600 text-white px-4 py-2 rounded m-1 hover:bg-red-700 transition duration-300">
+        <button key={index} className="bg-blue-600 text-white px-4 py-2 rounded m-1 hover:bg-blue-900 transition duration-300">
           {button}
         </button>
       ))}

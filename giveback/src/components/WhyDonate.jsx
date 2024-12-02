@@ -5,7 +5,7 @@ const WhyDonate = () => {
   return (
     <section className="bg-white">
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-        <h1 className="text-4xl tracking-tight leading-none md:text-5xl lg:text-6xl font-semibold text-primary mb-4 font-suse">Why Give?</h1>
+        <h1 className="text-4xl tracking-tight leading-none md:text-5xl lg:text-6xl font-semibold text-[#000080] mb-4 font-suse">Why Give?</h1>
         <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48">Your every gift to the institute brings a positive change and creates an impact. At IITJ brilliant minds converge to produce path-breaking research and forge a bright future. With your generosity, you become a partner in their success. Every gift matters. Explore a way to support your alma mater in a way that works for you. At IIT Jodhpur, donor appreciation is highly valued. Hence, we take care to show our heartfelt gratitude.</p>
       </div>
 
@@ -15,7 +15,7 @@ const WhyDonate = () => {
         <img src="./assets/card.jpg" alt="IIT Jodhpur Campus" className="h-96 w-96" />
         </div>
         <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
-        <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl font-semibold text-primary font-suse">
+        <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl font-semibold text-[#000080] font-suse">
             Giving = Gratitude
         </h1>
         <p className="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-8 md:text-xl sm:text-xl lg:text-xl">
@@ -28,7 +28,7 @@ const WhyDonate = () => {
     <section className="bg-white dark:bg-white px-4 sm:px-6 lg:px-8">
     <div className="max-w-screen-xl py-16 mx-auto lg:gap-8 xl:gap-0 lg:py-24 lg:grid lg:grid-cols-12">
         <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
-        <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl font-semibold text-primary font-suse">
+        <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl font-semibold text-[#000080] font-suse">
         Eminence of IITJ
         </h1>
         <p className="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-8 md:text-xl sm:text-xl lg:text-xl">
@@ -47,7 +47,7 @@ const WhyDonate = () => {
         <img src="./assets/card.jpg" alt="IIT Jodhpur Campus" className="h-96 w-96" />
         </div>
         <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
-        <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl font-semibold text-primary font-suse">
+        <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl font-semibold text-[#000080] font-suse">
         Building Future Generation
         </h1>
         <p className="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-8 md:text-xl sm:text-xl lg:text-xl">
@@ -60,7 +60,7 @@ const WhyDonate = () => {
     <section className="bg-white dark:bg-white px-4 sm:px-6 lg:px-8">
     <div className="max-w-screen-xl py-16 mx-auto lg:gap-8 xl:gap-0 lg:py-24 lg:grid lg:grid-cols-12">
         <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
-        <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl font-semibold text-primary font-suse">
+        <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl font-semibold text-[#000080] font-suse">
         Engaging the Community
         </h1>
         <p className="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-8 md:text-xl sm:text-xl lg:text-xl">
@@ -79,7 +79,7 @@ const WhyDonate = () => {
         <img src="./assets/card.jpg" alt="IIT Jodhpur Campus" className="h-96 w-96" />
         </div>
         <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
-        <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl font-semibold text-primary font-suse">
+        <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl font-semibold text-[#000080] font-suse">
         Lasting Legacy
         </h1>
         <p className="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-8 md:text-xl sm:text-xl lg:text-xl">

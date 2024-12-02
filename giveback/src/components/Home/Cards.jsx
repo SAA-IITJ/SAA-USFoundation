@@ -17,7 +17,7 @@ const Card = () => {
                     <div class="p-6 flex-grow">
                         <div class="mb-4">
                             <a href="/about"
-                                class="font-medium text-xl sm:text-2xl hover:text-primary transition duration-500 ease-in-out inline-block mb-2">
+                                class="font-medium text-xl sm:text-2xl hover:text-[#000080] transition duration-500 ease-in-out inline-block mb-2">
                                 Our Mission
                             </a>
                         </div>
@@ -40,7 +40,7 @@ const Card = () => {
                     <div class="p-6 flex-grow">
                         <div class="mb-4">
                             <a href="/whydonate"
-                                class="font-medium text-xl sm:text-2xl hover:text-primary transition duration-500 ease-in-out inline-block mb-2">
+                                class="font-medium text-xl sm:text-2xl hover:text-[#000080] transition duration-500 ease-in-out inline-block mb-2">
                                 Why Support IITJ
                             </a>
                         </div>
@@ -60,10 +60,10 @@ const Card = () => {
                             alt="Sunset in the mountains" />
                         <div class="absolute inset-0 bg-gray-900 opacity-25 transition duration-300 hover:opacity-0"></div>
                     </a>
-                    <div class="p-6 flex-grow">
-                        <div class="mb-4">
+                    <div class="p-5 flex-grow">
+                        <div class="mb-6">
                             <a href="/initiatives"
-                                class="font-medium text-xl sm:text-2xl hover:text-primary transition duration-500 ease-in-out inline-block mb-2">
+                                class="font-medium text-xl sm:text-2xl hover:text-[#000080] transition duration-500 ease-in-out inline-block mb-2">
                                 Initiatives
                             </a>
                         </div>

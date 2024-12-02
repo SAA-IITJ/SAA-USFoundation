@@ -48,10 +48,10 @@ const MenuItem = ({ text, isActive, onClick }) => (
 
     
   <div 
-    className={`flex items-center p-2 cursor-pointer ${isActive ? 'bg-gray-200 border-2 border-l-red-600 my-1 ' : 'hover:bg-gray-100'}`}
+    className={`flex items-center p-2 cursor-pointer ${isActive ? 'bg-gray-200 border-2 border-l-blue-600 my-1 ' : 'hover:bg-gray-100'}`}
     onClick={onClick}
   >
-   <span className='text-justify mr-2'>{text}</span>
+   <span className='text-justify mr-2 font-suse'>{text}</span>
     <ChevronRight className="ml-auto text-gray-400" size={16} />
   </div>
 );
@@ -73,29 +73,29 @@ const FacultyChairs = () => (
 
 // Mapping sections to components
 const sections = {
-  'Gangwal School of Medical Sciences and Technology': GangwalSchool,
-  'Academic Initiatives': AcademicInitiatives,
-  'Faculty Chairs': FacultyChairs,
-  'Young Faculty Fellowships': () =>     <DonationCards cardsData = {cardsData.slice(0, 6)}/>,
+  // 'Gangwal School of Medical Sciences and Technology': GangwalSchool,
+  //'Academic Initiatives': AcademicInitiatives,
+  //'Faculty Chairs': FacultyChairs,
+  //'Young Faculty Fellowships': () =>     <DonationCards cardsData = {cardsData.slice(0, 6)}/>,
   'Student Initiatives': () =>     <DonationCards cardsData = {cardsData.slice(0, 3)}/>,
-  'Social and Community Initiatives': () =>     <DonationCards cardsData = {cardsData.slice(0, 2)}/>,
+  //'Social and Community Initiatives': () =>     <DonationCards cardsData = {cardsData.slice(0, 2)}/>,
   'Infrastructure Initiatives': () =>     <DonationCards cardsData = {cardsData.slice(0, 5)}/>,
-  'Memorial Funds': () =>     <DonationCards cardsData = {cardsData.slice(0, 3)}/>,
+  // 'Memorial Funds': () =>     <DonationCards cardsData = {cardsData.slice(0, 3)}/>,
   'Departmental Funds': () =>     <DonationCards cardsData = {cardsData.slice(0, 1)}/>,
-  'IITJ Silicon Valley Chapter': () =>     <DonationCards cardsData = {cardsData.slice(0, 4)}/>,
+  //'IITJ Silicon Valley Chapter': () =>     <DonationCards cardsData = {cardsData.slice(0, 4)}/>,
 };
 
 const AboutIITJFoundation = () => {
-  const [activeSection, setActiveSection] = useState('Gangwal School of Medical Sciences and Technology');
+  const [activeSection, setActiveSection] = useState('Student Initiatives');
   const ActiveSectionComponent = sections[activeSection];
 
 
   return (
-    <div className="max-w-6xl mx-auto p-4 font-sans">
-      <h1 className="text-3xl font-bold text-center mb-8">CAMPAIGNS</h1>
+    <div className="max-w-6xl mx-auto p-4 font-suse">
+      <h1 className="text-3xl font-bold text-center mb-8 font-suse">CAMPAIGNS</h1>
       <div className="flex flex-col md:flex-row">
         <div className="w-full md:w-1/3 bg-gray-50 p-4">
-          <h2 className="text-red-600 font-semibold mb-4">Campaigns</h2>
+          <h2 className="text-[#000080] font-semibold mb-4 font-suse">Campaigns</h2>
           {Object.keys(sections).map((section) => (
             <MenuItem 
               key={section}
@@ -106,7 +106,7 @@ const AboutIITJFoundation = () => {
           ))}
         </div>
         <div className="w-full md:w-2/3 p-2">
-          <h2 className="text-xl text-left font-semibold text-red-600 mb-4">{activeSection}</h2>
+          <h2 className="text-xl text-left font-semibold text-[#000080] mb-4 font-suse">{activeSection}</h2>
           <ActiveSectionComponent />
         </div>
       </div>

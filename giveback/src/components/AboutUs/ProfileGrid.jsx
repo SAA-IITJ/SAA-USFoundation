@@ -7,7 +7,7 @@ const ProfileCard = ({ name, title, education, image }) => (
       <h3 className="font-bold text-lg">{name}</h3>
       <p className="text-sm text-gray-600">{title}</p>
       <p className="text-xs text-gray-500 mt-1">{education}</p>
-      <button className="mt-2 text-red-600 text-sm font-semibold">View Profile</button>
+      <button className="mt-2 text-blue-500 text-sm font-semibold">View Profile</button>
     </div>
   </div>
 );
