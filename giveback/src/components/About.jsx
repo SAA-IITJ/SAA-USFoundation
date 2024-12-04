@@ -6,7 +6,7 @@ import ProfileGrid from './AboutUs/ProfileGrid';
 const MenuItem = ({ text, isActive, onClick }) => (
   <div 
     className={`flex font-suse items-center p-2 cursor-pointer ${isActive ? 'bg-gray-200' : 'hover:bg-gray-100'}`}
-    onClick={onClick}
+    onClick={onClick} id={text.replaceAll(' ','')}
   >
     <span className="text-blue-500 mr-2">|</span>
     <span>{text}</span>

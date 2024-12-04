@@ -33,7 +33,7 @@ const SlideContent = React.memo(({ heading, subheading }) => (
     transition={{ duration: 0.5 }}
   >
     <motion.h3 
-      className="font-['Roboto_Slab'] text-xl md:text-2xl italic font-extralight tracking-[3px] text-white/70 mb-2"
+      className="font-['Roboto_Slab'] text-xl md:text-2xl italic font-extralight tracking-[3px] text-white/80 mb-2"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
@@ -74,7 +74,7 @@ const HeroSlider = () => {
       prevNextButtons: false,
       pageDots: true,
       setGallerySize: false,
-      autoPlay: 2000,
+      autoPlay: 5000,
       wrapAround: true,
       pauseAutoPlayOnHover: true,
       arrowShape: {

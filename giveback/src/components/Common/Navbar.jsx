@@ -147,11 +147,7 @@ const Navbar = () => {
                 alt="logo"
                 className="h-20 md:h-20"
               />
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/IIT-JODHPUR-2.png`}
-                alt="logo"
-                className="h-16 md:h-12 ml-6"
-              />
+              <h1 className="text-2xl font-bold text-[#000080]" style={{fontFamily:"Playfair Display"}}>IIT JODHPUR FOUNDATION</h1>
             </div>
           </Link>
 

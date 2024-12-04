@@ -6,7 +6,7 @@ export const heroData = [
     },
     {
         imageUrl: './assets/carousel2.jpg',
-        haeding:"THE PLANNED GIVING PROGRAM",
-        subheading: "We are excited to announce the launch of the planned giving program, which provides our alumni and well-wishers with an opportunity to make a lasting impact by providing for the future of IITJ.",
+        haeding:"JOIN US IN MAKING A DIFFERENCE",
+        subheading: "Whether you are an alumnus, a corporate partner, or a supporter, there are many ways to contribute to IITJ Foundation’s mission.",
     },
 ]
