@@ -6,9 +6,10 @@ const Footer = () => {
     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-4 gap-y-16 gap-x-12">
             <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-                <img className="w-auto h-12" src="./assets/IIT-JODHPUR-2.png" alt="" />
+              <h1 className="text-2xl font-bold text-[#000080]" style={{fontFamily:"Playfair Display"}}>IIT JODHPUR FOUNDATION</h1>
+                
 
-                <p className="text-base leading-relaxed text-gray-600 mt-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                <p className="text-base leading-relaxed text-gray-600 mt-7">Engaging and supporting alumni, enhancing branding, and raising funds for the betterment of the Indian Institute of Technology Jodhpur.</p>
 
                 <ul className="flex items-center space-x-3 mt-9">
                     <li>
@@ -56,11 +57,11 @@ const Footer = () => {
             </div>
 
             <div>
-                <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase">Company</p>
+                <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase">Non-Profit Organization</p>
 
-                <ul className="mt-6 space-y-4 lg:ml-24">
+                <ul className="mt-6 space-y-4 lg:ml-20">
                     <li>
-                        <a href="/about" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
+                        <a href="/about" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Board of Directors </a>
                     </li>
 
                     <li>
@@ -68,33 +69,23 @@ const Footer = () => {
                     </li>
 
                     <li>
-                        <a href="/initiatives" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Initiatives </a>
-                    </li>
-
-                    <li>
-                        <a href="/initiatives" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Donate </a>
+                        <a href="/initiatives" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Make An Impact Today </a>
                     </li>
                 </ul>
             </div>
 
             <div>
-                <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase">Help</p>
+                <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase"> Additional Resources</p>
 
-                <ul className="mt-6 space-y-4 lg:ml-28">
+                <ul className="mt-6 space-y-4 lg:ml-20">
                     <li>
-                        <a href="/contact" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Contact </a>
+                        <a href="/contact" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600 whitespace-nowrap"> Interested in Volunteering? </a>
                     </li>
-
                     <li>
-                        <a href="/" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Terms & Conditions </a>
+                        <a href="https://www.iitj.ac.in/" target='__blank' title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 "> IITJ Official Website </a>
                     </li>
-
                     <li>
-                        <a href="/" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Privacy Policy </a>
-                    </li>
-
-                    <li>
-                        <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> IITJ Official Website </a>
+                        <a href="https://iitj.ac.in/infra/offices/index.php?id=people&office_val=office_of_alumni_relations"  target='__blank' title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600">IITJ DORA</a>
                     </li>
                 </ul>
             </div>
@@ -103,6 +94,8 @@ const Footer = () => {
         <hr className="mt-16 mb-10 border-gray-200" />
 
         <p className="text-normal text-center font-suse font-bold text-gray-600">Designed and Developed by Society of Alumni Affairs, IIT Jodhpur</p>
+        <br />
+        <p className="text-normal text-center font-suse  text-gray-600">Copyright © 2024 IIT Jodhpur Foundation. All Rights Reserved. </p>
     </div>
 </section>
 
