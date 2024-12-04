@@ -145,12 +145,12 @@ const Navbar = () => {
               <img
                 src={`${process.env.PUBLIC_URL}/assets/IITJ-coloured.png`}
                 alt="logo"
-                className="h-20 md:h-20"
+                className="h-20 md:h-12 sm:h-8"
               />
               <img
                 src={`${process.env.PUBLIC_URL}/assets/IIT-JODHPUR-2.png`}
                 alt="logo"
-                className="h-16 md:h-12 ml-6"
+                className="h-16 md:h-12 sm:h-8"
               />
             </div>
           </Link>
