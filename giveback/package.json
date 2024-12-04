@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -13,10 +14,10 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
     "react-intersection-observer": "^9.13.1",
+    "react-router-dom": "^7.0.1",
     "react-scripts": "5.0.1",
     "resize-observer-polyfill": "^1.5.1",
-    "web-vitals": "^2.1.4",
-    "react-router-dom": "^7.0.1"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
