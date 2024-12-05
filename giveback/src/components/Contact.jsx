@@ -1,10 +1,32 @@
 import React, { useState } from 'react';
 import { MapPin, Mail, Phone } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 interface ContactInfo {
   address: string[];
   email: string;
   phone: string;
+}
+
+const sendEmail = (event,templateParams) => {
+  event.preventDefault();
+  emailjs
+    .send(
+      'service_zf903fl',
+      'template_lqbnx49',
+      templateParams,
+      '2-JjtipQ6rzIfl6W3'
+    )
+    .then(
+      (response) => {
+        console.log("SUCCESS!",response.status,response.text);
+        alert('Message sent!');
+      }
+      ,(err)=>{
+        console.log("FAILED...",err);
+        alert('An error occured!');
+      }
+    );
 }
 
 const ContactUs: React.FC = () => {
@@ -15,18 +37,38 @@ const ContactUs: React.FC = () => {
 
   const contactInfo: ContactInfo = {
     address: [
-      'IIT Jodhpur Foundation',
-      '3790 El Camino Real, #1038',
-      'Palo Alto, CA 94306'
+      'IIT Jodhpur North America Foundation',
+      '7901 4th St N',
+      '#22486',
+      'St. Petersburg, FL, USA 33702'
     ],
-    email: 'cfo@iitjfoundation.org',
-    phone: '+16505078719'
+    email: [
+      'secretary@iitjfoundation.org', 
+      'donate@iitjfoundation.org', 
+      'dora@iitjfoundation.org'
+    ],
+    phone: '+1 786-396-0746'
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log('Form submitted:', { name, email, subject, message });
+
+    const template_params = {
+      to_email: contactInfo.email[0],
+      reply_to: email,
+      client_email: email,
+      cc_email: contactInfo.email[2],
+      bcc_email: '',
+      to_name: 'Secretary , IITJ-Foundation',
+      from_name: name,
+      subject: subject,
+      message: message,
+    }
+
+    sendEmail(e,template_params);
+    
   };
 
   return (
@@ -48,11 +90,13 @@ const ContactUs: React.FC = () => {
               <div className="bg-white shadow-md rounded-lg p-6">
                 <Mail className="w-12 h-12 text-blue-500 mx-auto mb-4" />
                 <h2 className="text-2xl font-semibold text-center mb-2">Email Us</h2>
-                <p className="text-center">{contactInfo.email}</p>
+                {contactInfo.email.map((line) => {
+                  return <p className="text-center">{line}</p>
+                })}
               </div>
             </div>
-            <div className="w-1/2 px-2">
-              <div className="bg-white shadow-md rounded-lg p-6">
+            <div className="w-1/2 px-2 min-h-full">
+              <div className="bg-white shadow-md rounded-lg p-6 min-h-full">
                 <Phone className="w-12 h-12 text-blue-500 mx-auto mb-4" />
                 <h2 className="text-2xl font-semibold text-center mb-2">Call Us</h2>
                 <p className="text-center">{contactInfo.phone}</p>
@@ -61,7 +105,7 @@ const ContactUs: React.FC = () => {
           </div>
         </div>
         
-        <div className="w-full md:w-1/2 px-4">
+        <div className="w-full md:w-1/2 px-4 min-h-full">
           <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6">
             <div className="mb-4">
               <input
