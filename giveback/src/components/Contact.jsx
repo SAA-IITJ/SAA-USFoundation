@@ -73,7 +73,7 @@ const ContactUs: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 font-suse">
-      <h1 className="text-4xl font-bold text-center mb-8">CONTACT US</h1>
+      <h1 className="text-3xl font-semibold text-center mb-8 mt-8 font-suse">CONTACT US</h1>
       <div className="h-1 w-16 bg-[#ff8c00] mx-auto mb-12"></div>
       
       <div className="flex flex-wrap -mx-4">

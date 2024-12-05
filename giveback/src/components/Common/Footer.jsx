@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Footer = () => {        
     return (
-        <section className="py-10 bg-white sm:pt-16 lg:pt-24">
+        <section className="py-10 bg-white sm:pt-16 lg:pt-24 font-suse">
     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-4 gap-y-16 gap-x-12">
             <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
@@ -57,9 +57,9 @@ const Footer = () => {
             </div>
 
             <div>
-                <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase">Non-Profit Organization</p>
+                <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase lg:ml-8">Non-Profit Organization</p>
 
-                <ul className="mt-6 space-y-4 lg:ml-20">
+                <ul className="mt-6 space-y-4 lg:ml-10">
                     <li>
                         <a href="/about" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Board of Directors </a>
                     </li>
@@ -75,9 +75,9 @@ const Footer = () => {
             </div>
 
             <div>
-                <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase"> Additional Resources</p>
+                <p className="text-sm font-semibold tracking-widest text-gray-600 uppercase lg:ml-7"> Additional Resources</p>
 
-                <ul className="mt-6 space-y-4 lg:ml-20">
+                <ul className="mt-6 space-y-4 lg:ml-14">
                     <li>
                         <a href="/contact" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600 whitespace-nowrap"> Interested in Volunteering? </a>
                     </li>

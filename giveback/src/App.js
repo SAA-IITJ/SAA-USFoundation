@@ -16,6 +16,7 @@ import About from './components/About';
 import WhyDonate from './components/WhyDonate';
 import Initiatives from './components/Initiatives';
 import ContactUs from './components/Contact';
+import Profiles from './components/Profiles';
 
 function Main() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path='/about' element={<About/>}/>
           <Route path="/donate" element={<Donate />} />
           <Route path="/whydonate" element={<WhyDonate />} />
+          <Route path="/about/Profiles" element={<Profiles />} />
           <Route path="/donate/in/Annual-Gift-Programme" element={<IndiaDonate/>} />
           <Route path="/donate/oc/Annual-Gift-Programme" element={<OtherCountriesDonate/>} />
         </Routes>
