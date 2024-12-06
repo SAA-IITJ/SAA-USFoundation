@@ -19,7 +19,7 @@ const cardsData = [
       <br/>
       <p>Your generosity fuels a brighter future for IIT Jodhpur’s students, faculty, and the global community. Together, we can elevate the Institute’s legacy of excellence and innovation.</p>
     `,
-    imageSrc: "https://placehold.co/600x400",
+    imageSrc: "./assets/iitj12.JPG",
     buttons: [
       { label: "Debit/Credit Card/Online Banking", link: "/" },
       { label: "Cheque /Draft", link: "/whydonate" }
@@ -37,7 +37,7 @@ const cardsData = [
         <li>Travel grants for presenting research at global conferences.</li>
       </ul>
     `,
-    imageSrc: "https://placehold.co/600x400",
+    imageSrc: "./assets/iitj15.png",
     buttons: [
       { label: "Debit/Credit Card/Online Banking", link: "/" },
       { label: "Cheque /Draft", link: "/whydonate" }
@@ -55,7 +55,7 @@ const cardsData = [
         <li>Upgrading equipment to ensure students and faculty have access to the latest technology.</li>
       </ul>
     `,
-    imageSrc: "https://placehold.co/600x400",
+    imageSrc: "./assets/iitj13.jpg",
     buttons: [
       { label: "Debit/Credit Card/Online Banking", link: "/" },
       { label: "Cheque /Draft", link: "/whydonate" }
@@ -73,7 +73,7 @@ const cardsData = [
         <li>Endowments for named chairs or fellowships to honor exceptional educators.</li>
       </ul>
     `,
-    imageSrc: "https://placehold.co/600x400",
+    imageSrc: "./assets/iitj4.jpg",
     buttons: [
       { label: "Debit/Credit Card/Online Banking", link: "/" },
       { label: "Cheque /Draft", link: "/whydonate" }
@@ -91,7 +91,7 @@ const cardsData = [
         <li>Funding interdisciplinary projects involving multiple departments.</li>
       </ul>
     `,
-    imageSrc: "https://placehold.co/600x400",
+    imageSrc: "./assets/carousel2.jpg",
     buttons: [
       { label: "Debit/Credit Card/Online Banking", link: "/" },
       { label: "Cheque /Draft", link: "/whydonate" }
@@ -109,7 +109,7 @@ const cardsData = [
         <li>Supporting initiatives that celebrate alumni achievements.</li>
       </ul>
     `,
-    imageSrc: "https://placehold.co/600x400",
+    imageSrc: "./assets/carousel1.jpg",
     buttons: [
       { label: "Debit/Credit Card/Online Banking", link: "/" },
       { label: "Cheque /Draft", link: "/whydonate" }
@@ -127,7 +127,7 @@ const cardsData = [
         <li>Supporting the establishment of startup incubation centers.</li>
       </ul>
     `,
-    imageSrc: "https://placehold.co/600x400",
+    imageSrc: "./assets/card1.jpg",
     buttons: [
       { label: "Debit/Credit Card/Online Banking", link: "/" },
       { label: "Cheque /Draft", link: "/whydonate" }
@@ -145,7 +145,7 @@ const cardsData = [
         <li>Creating a legacy by honoring family members or mentors through donations.</li>
       </ul>
     `,
-    imageSrc: "https://placehold.co/600x400",
+    imageSrc: "./assets/iitj14.png",
     buttons: [
       { label: "Debit/Credit Card/Online Banking", link: "/" },
       { label: "Cheque /Draft", link: "/whydonate" }

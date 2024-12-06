@@ -33,7 +33,7 @@ const CardBox = ({ title, description, imagesrc, imagealt, href }) => {
 }
 
 const Card = () => {
-    const imagesrc = ["./assets/card1.jpg", "./assets/card.jpg", "./assets/card2.jpg"];
+    const imagesrc = ["./assets/card1.jpg", "./assets/iitj12.JPG", "./assets/iitj15.png"];
     const imagealt = ["Sunset in the mountains", "IITJ Campus", "Fountain"];
     const href = ["/about#MissionandObjectives", "/whydonate", "/initiatives"];
 

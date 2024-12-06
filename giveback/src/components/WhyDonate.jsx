@@ -40,7 +40,7 @@ const WhyDonate = () => {
         <section className="bg-blue-50 px-4 sm:px-6 lg:px-8 mb-16">
           <div className="max-w-screen-xl py-16 mx-auto lg:gap-8 xl:gap-0 lg:py-24 lg:grid lg:grid-cols-12 ">
           <div className="hidden lg:ml-8 lg:col-span-5 lg:flex">
-              <img src="./assets/card1.jpg" alt="IIT Jodhpur Campus" className="w-96 rounded-xl object-cover" />
+              <img src="./assets/carousel2.jpg" alt="IIT Jodhpur Campus" className="w-96 rounded-xl object-cover" />
               </div>
               <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
               <h1 className="max-w-2xl mb-4 text-3xl tracking-tight leading-none md:text-4xl xl:text-5xl font-semibold text-[#000080] font-suse">
@@ -80,7 +80,7 @@ const WhyDonate = () => {
             </p>
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex ml-16">
-            <img src="./assets/card2.jpg" alt="IIT Jodhpur Campus" className="h-96 w-96 rounded-xl object-cover" />
+            <img src="./assets/iitj13.jpg" alt="IIT Jodhpur Campus" className="h-96 w-96 rounded-xl object-cover" />
             </div>
         </div>
         </section>
@@ -88,7 +88,7 @@ const WhyDonate = () => {
         <section className="bg-blue-50 px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-screen-xl py-16 mx-auto lg:gap-8 xl:gap-0 lg:py-24 lg:grid lg:grid-cols-12">
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="./assets/card3.jpg" alt="IIT Jodhpur Campus" className="h-96 w-96 rounded-xl object-cover" />
+            <img src="./assets/iitj2.jpg" alt="IIT Jodhpur Campus" className="h-96 w-96 rounded-xl" />
             </div>
             <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
             <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-5xl font-semibold text-[#000080] font-suse">
@@ -118,7 +118,7 @@ const WhyDonate = () => {
           </p>
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="./assets/card1.jpg" alt="IIT Jodhpur Campus" className="h-96 w-96 rounded-xl" />
+            <img src="./assets/iitj14.png" alt="IIT Jodhpur Campus" className="h-96 w-96 rounded-xl object-cover" />
             </div>
         </div>
         </section>

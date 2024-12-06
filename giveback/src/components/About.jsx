@@ -42,7 +42,7 @@ const dummyData = [
   },
   {
     name: "Kaushal A.Desai",
-    title: "Secretary",
+    title: "Dean of Alumni Relations (DORA), IIT Jodhpur (Ex-Officio)",
     image: "./kaushal.jpg"
   },
   {
