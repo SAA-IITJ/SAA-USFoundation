@@ -147,7 +147,8 @@ const Navbar = () => {
                 alt="logo"
                 className="h-20 md:h-12 sm:h-8"
               />
-              <h1 className="text-2xl font-bold text-[#000080]" style={{fontFamily:"Playfair Display"}}>IIT JODHPUR FOUNDATION</h1>
+              <h1 className="text-2xl font-bold text-[#000080]" style={{fontFamily:"Playfair Display"}}>IIT JODHPUR </h1>
+              <h1 className="text-2xl font-bold text-[#000080] ml-2" style={{fontFamily:"Playfair Display"}}>   FOUNDATION</h1>
             </div>
           </Link>
 

@@ -44,14 +44,14 @@ const WhyDonate = () => {
               </div>
               <div className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left">
               <h1 className="max-w-2xl mb-4 text-3xl tracking-tight leading-none md:text-4xl xl:text-5xl font-semibold text-[#000080] font-suse">
-                  Your Gifts Creates Impact
+                  Your Gifts Create Impact
               </h1>
               <p className="max-w-2xl mb-6 font-suse text-black lg:mb-8 md:text-xl sm:text-xl lg:text-xl">
               <b>Fueling Innovation:</b>
               <br />
               Support cutting-edge research that addresses real-world challenges and positions IIT  Jodhpur as a global hub of innovation. Your donation helps fund groundbreaking projects  that redefine technology, science, and societal progress. 
               <br />
-              <b>Empowering Excellence</b>
+              <b>Empowering Excellence:</b>
               <br />
               Scholarships funded by your generosity enable deserving students to achieve their dreams without financial constraints. Your gift ensures that talent, not circumstances, determines  success
               </p>

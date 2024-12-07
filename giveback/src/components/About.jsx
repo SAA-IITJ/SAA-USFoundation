@@ -184,8 +184,8 @@ const AdvisoryBoard = () => (
 const sections = {
   'Mission and Objectives': MissionObjectives,
   'Governance Framework': GovernanceFramework,
-  'Board Members': BoardMembers,
-  'Advisory Board': AdvisoryBoard,
+  'Board of Directors': BoardMembers,
+  'Board Advisors and Supporting Roles': AdvisoryBoard,
 };
 
 const AboutIITJFoundation = () => {

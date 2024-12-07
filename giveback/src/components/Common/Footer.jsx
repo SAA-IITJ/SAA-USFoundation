@@ -61,7 +61,7 @@ const Footer = () => {
 
                 <ul className="mt-6 space-y-4 lg:ml-10">
                     <li>
-                        <a href="/about" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Board of Directors </a>
+                        <a href="/about/Profiles" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Board of Directors </a>
                     </li>
 
                     <li>
