@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import ProfileGrid from './AboutUs/ProfileGrid';
 import { div } from 'framer-motion/client';
+import NewGrid from './AboutUs/NewGrid';
 
 // MenuItem component
 const MenuItem = ({ text, isActive, onClick }) => (
@@ -50,6 +51,14 @@ const dummyData = [
     title: "Director, IIT Jodhpur (Ex-Officio)",
     image: "./avinash.jpg"
   },
+];
+
+const newData = [
+  {
+    name: "Santosh R. Somi Reddy",
+    title: "Board Advisor",
+    image: "./santosh.jpeg"
+  }
 ];
 
 
@@ -113,7 +122,7 @@ const MissionObjectives = () => (
     <strong>Collaborative Efforts</strong>
   </p>
   <p className="mb-2 text-gray-700 font-suse">
-    IITJF works closely with the IIT Jodhpur Director’s office and the Dean of Relations and Alumni (DORA) to strengthen and expand the global IIT Jodhpur alumni network, creating a lasting legacy of excellence and innovation.
+    IITJF works closely with the IIT Jodhpur Director’s office and the Dean of Resources & Alumni (DORA) to strengthen and expand the global IIT Jodhpur alumni network, creating a lasting legacy of excellence and innovation.
   </p>
 </div>
 );
@@ -177,7 +186,7 @@ const BoardMembers = () => (
 );
 
 const AdvisoryBoard = () => (
-  <div className="bg-white p-2 text-justify rounded-lg max-w-4xl mx-auto"></div>
+  <NewGrid profiles={newData}/>
 );
 
 // Mapping sections to components
