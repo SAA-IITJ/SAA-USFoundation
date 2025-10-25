@@ -9,7 +9,7 @@ const WhyDonate = () => {
         <p className="mb-8 text-lg font-suse text-gray-600 lg:text-xl sm:px-16 xl:px-48"><b>Join us in making an impact. Your journey with IIT Jodhpur continues here! </b></p>
         <hr className="border-0.1 border-gray-300 mb-8" />
         <section className='bg-gray-100 p-4 rounded-3xl'>
-          <p className="mb-4 mt-8 text-lg font-suse text-gray-800 lg:text-xl sm:px-16 xl:px-48"><b>Cheques: </b>
+          <p className="mb-4 mt-8 text-lg font-suse text-gray-800 lg:text-xl sm:px-16 xl:px-48"><b>Debit/Credit/Bank Transfer/Cheques: </b>
           <p className="py-4 mx-auto max-w-screen-xl text-left lg:text-xl sm:px-16 font-suse text-gray-700">
           <b>Please mail cheques/drafts made out to “IIT Jodhpur North America Foundation” to:</b>
           <br />

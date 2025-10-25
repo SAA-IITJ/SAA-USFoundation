@@ -21,7 +21,7 @@ const cardsData = [
     `,
     imageSrc: "./assets/iitj12.JPG",
     buttons: [
-      { label: "Debit/Credit Card/Online Banking", link: "/" },
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
       { label: "Cheque /Draft", link: "/whydonate" }
     ]
   },
@@ -39,7 +39,7 @@ const cardsData = [
     `,
     imageSrc: "./assets/iitj15.png",
     buttons: [
-      { label: "Debit/Credit Card/Online Banking", link: "/" },
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
       { label: "Cheque /Draft", link: "/whydonate" }
     ]
   },
@@ -57,7 +57,7 @@ const cardsData = [
     `,
     imageSrc: "./assets/iitj13.jpg",
     buttons: [
-      { label: "Debit/Credit Card/Online Banking", link: "/" },
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
       { label: "Cheque /Draft", link: "/whydonate" }
     ]
   },
@@ -75,7 +75,7 @@ const cardsData = [
     `,
     imageSrc: "./assets/iitj4.jpg",
     buttons: [
-      { label: "Debit/Credit Card/Online Banking", link: "/" },
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
       { label: "Cheque /Draft", link: "/whydonate" }
     ]
   },
@@ -93,7 +93,7 @@ const cardsData = [
     `,
     imageSrc: "./assets/carousel2.jpg",
     buttons: [
-      { label: "Debit/Credit Card/Online Banking", link: "/" },
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
       { label: "Cheque /Draft", link: "/whydonate" }
     ]
   },
@@ -111,7 +111,7 @@ const cardsData = [
     `,
     imageSrc: "./assets/carousel1.jpg",
     buttons: [
-      { label: "Debit/Credit Card/Online Banking", link: "/" },
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
       { label: "Cheque /Draft", link: "/whydonate" }
     ]
   },
@@ -129,7 +129,7 @@ const cardsData = [
     `,
     imageSrc: "./assets/card1.jpg",
     buttons: [
-      { label: "Debit/Credit Card/Online Banking", link: "/" },
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
       { label: "Cheque /Draft", link: "/whydonate" }
     ]
   },
@@ -147,7 +147,7 @@ const cardsData = [
     `,
     imageSrc: "./assets/iitj14.png",
     buttons: [
-      { label: "Debit/Credit Card/Online Banking", link: "/" },
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
       { label: "Cheque /Draft", link: "/whydonate" }
     ]
   },
