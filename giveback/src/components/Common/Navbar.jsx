@@ -12,6 +12,7 @@ import { NavItems } from "../../data/navItem";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredPath, setHoveredPath] = useState("");
+  const [focusedPath, setFocusedPath] = useState("");
   const [pathname, setPathname] = useState("/");
   const controller1 = useAnimation();
   const controller2 = useAnimation();
@@ -26,33 +27,29 @@ const Navbar = () => {
     const t3 = isOpen ? { rotate: 45 } : { y: 0 };
     const t4 = isOpen ? { rotate: -45 } : { y: 0 };
 
-    if (isOpen) {
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      document.documentElement.style.overflow = "auto";
-    }
+    document.documentElement.style.overflow = isOpen ? "hidden" : "auto";
 
     controller1
       .start({
         ...t1,
-        transition: { duration: 0.3, ease: "easeOut" },
+        transition: { duration: 0.28, ease: "easeOut" },
       })
       .then(() => {
         controller1.start({
           ...t3,
-          transition: { duration: 0.3, ease: "circOut" },
+          transition: { duration: 0.28, ease: "circOut" },
         });
       });
 
     controller2
       .start({
         ...t2,
-        transition: { duration: 0.3, ease: "easeOut" },
+        transition: { duration: 0.28, ease: "easeOut" },
       })
       .then(() => {
         controller2.start({
           ...t4,
-          transition: { duration: 0.3, ease: "circOut" },
+          transition: { duration: 0.28, ease: "circOut" },
         });
       });
   }, [isOpen, controller1, controller2]);
@@ -61,17 +58,11 @@ const Navbar = () => {
     if (!navRef.current) return;
     const observer = new ResizeObserver((entries) => {
       for (let entry of entries) {
-        if (entry.contentRect.width < 1024) {
-          setIsMobile(true);
-        } else {
-          setIsMobile(false);
-        }
+        setIsMobile(entry.contentRect.width < 1024);
       }
     });
     observer.observe(navRef.current);
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, [navRef]);
 
   useEffect(() => {
@@ -98,16 +89,12 @@ const Navbar = () => {
   const menuVariants = {
     open: {
       clipPath: "circle(1000px at 90% 35px)",
-      transition: {
-        type: "spring",
-        stiffness: 20,
-        restDelta: 2,
-      },
+      transition: { type: "spring", stiffness: 20, restDelta: 2 },
     },
     closed: {
       clipPath: "circle(30px at 90% 35px)",
       transition: {
-        delay: 0.5,
+        delay: 0.45,
         type: "spring",
         stiffness: 400,
         damping: 40,
@@ -116,82 +103,115 @@ const Navbar = () => {
   };
 
   const menuItemVariants = {
-    open: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        y: { stiffness: 1000, velocity: -100 },
-      },
-    },
-    closed: {
-      y: 50,
-      opacity: 0,
-      transition: {
-        y: { stiffness: 1000 },
-      },
-    },
+    open: { y: 0, opacity: 1 },
+    closed: { y: 50, opacity: 0 },
   };
+
+  const isUnderlined = (path) => hoveredPath === path || focusedPath === path;
 
   return (
     <motion.nav
       ref={navRef}
-      className="bg-white text-gray-600 min-h-[60px] py-2 px-4 border-b border-gray-200 sticky top-0 z-50"
+      className="bg-white text-gray-600 min-h-[64px] py-2 px-4 border-b border-gray-200 sticky top-0 z-50"
       animate={navController}
     >
       <div className="container mx-auto max-w-7xl">
-        <div className="flex items-center justify-between">
-          <Link to="/" onClick={() => setPathname("/")}>
-            <div className="flex items-center justify-between">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/IITJ-coloured.png`}
-                alt="logo"
-                className="h-20 md:h-12 sm:h-8"
-              />
-              <h1 className="text-2xl font-bold text-[#000080]" style={{fontFamily:"Playfair Display"}}>IIT JODHPUR </h1>
-              <h1 className="text-2xl font-bold text-[#000080] ml-2" style={{fontFamily:"Playfair Display"}}>   FOUNDATION</h1>
-            </div>
+        <div className="flex items-center justify-between flex-nowrap gap-4">
+          <Link
+            to="/"
+            onClick={() => setPathname("/")}
+            className="flex items-center flex-shrink-0 whitespace-nowrap"
+            aria-label="Go to homepage"
+          >
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/IITJ-coloured.png`}
+              alt="IITJ logo"
+              className="h-10 md:h-12 w-auto flex-shrink-0"
+            />
+            <h1
+              className="ml-3 text-lg md:text-2xl font-bold text-[#000080] whitespace-nowrap"
+              style={{ fontFamily: "Playfair Display" }}
+            >
+              IIT JODHPUR FOUNDATION
+            </h1>
           </Link>
 
-          <div className="hidden lg:flex ml-10">
-            <div className="flex space-x-4 items-center">
-              {NavItems.map((navItem) => (
-                <div
-                  key={navItem.id}
-                  className="relative h-full flex justify-center items-center"
-                >
-                  <a
-                    href={navItem.path}
-                    className={`py-2 font-suse px-4 text-md font-medium ${
-                      pathname === navItem.path ||
-                      ((pathname === "/" || pathname === "") &&
-                        navItem.name === "Home")
-                        ? "text-[#000080]"
-                        : ""
-                    } hover:text-[#000080]`}
-                    onMouseEnter={() => setHoveredPath(navItem.path)}
-                    onMouseLeave={() => setHoveredPath("")}
-                    onClick={() => setPathname(navItem.path)}
+          <div className="hidden lg:flex items-center flex-nowrap">
+            <div className="flex items-center space-x-3">
+              {NavItems.map((navItem) => {
+                const isExternal = !!navItem.external || /^https?:\/\//.test(navItem.path);
+                return (
+                  <div
+                    key={navItem.id}
+                    className="relative flex items-center"
+                    style={{ height: 44 }}
                   >
-                    {navItem.name}
-                  </a>
-                  <AnimatePresence>
-                    {hoveredPath === navItem.path && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: -4 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#000080]"
-                      />
+                    {isExternal ? (
+                      <a
+                        href={navItem.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="py-2 px-3 text-sm md:text-md font-medium whitespace-nowrap inline-block relative"
+                        onMouseEnter={() => setHoveredPath(navItem.path)}
+                        onMouseLeave={() => setHoveredPath("")}
+                        onFocus={() => setFocusedPath(navItem.path)}
+                        onBlur={() => setFocusedPath("")}
+                        aria-label={`${navItem.name} (opens in new tab)`}
+                      >
+                        {navItem.name}
+                        <AnimatePresence>
+                          {isUnderlined(navItem.path) && (
+                            <motion.span
+                              initial={{ opacity: 0, scaleX: 0 }}
+                              animate={{ opacity: 1, scaleX: 1 }}
+                              exit={{ opacity: 0, scaleX: 0 }}
+                              transition={{ duration: 0.22, ease: "easeOut" }}
+                              className="absolute left-0 right-0 -bottom-1 h-0.5 origin-left bg-[#000080] block"
+                              style={{ transformOrigin: "left" }}
+                            />
+                          )}
+                        </AnimatePresence>
+                      </a>
+                    ) : (
+                      <a
+                        href={navItem.path}
+                        className={`py-2 px-3 text-sm md:text-md font-medium whitespace-nowrap inline-block relative ${
+                          pathname === navItem.path ||
+                          ((pathname === "/" || pathname === "") &&
+                            navItem.name.toLowerCase() === "home")
+                            ? "text-[#000080]"
+                            : "text-gray-700"
+                        }`}
+                        onMouseEnter={() => setHoveredPath(navItem.path)}
+                        onMouseLeave={() => setHoveredPath("")}
+                        onFocus={() => setFocusedPath(navItem.path)}
+                        onBlur={() => setFocusedPath("")}
+                        onClick={() => setPathname(navItem.path)}
+                        aria-current={pathname === navItem.path ? "page" : undefined}
+                      >
+                        {navItem.name}
+                        <AnimatePresence>
+                          {isUnderlined(navItem.path) && (
+                            <motion.span
+                              initial={{ opacity: 0, scaleX: 0 }}
+                              animate={{ opacity: 1, scaleX: 1 }}
+                              exit={{ opacity: 0, scaleX: 0 }}
+                              transition={{ duration: 0.22, ease: "easeOut" }}
+                              className="absolute left-0 right-0 -bottom-1 h-0.5 origin-left bg-[#000080] block"
+                              style={{ transformOrigin: "left" }}
+                            />
+                          )}
+                        </AnimatePresence>
+                      </a>
                     )}
-                  </AnimatePresence>
-                </div>
-              ))}
+                  </div>
+                );
+              })}
+
               <motion.div
-                rel="noopener noreferrer"
-                className="border cursor-pointer ml-4 border-[#000080] bg-[#000080] py-2 px-4 md:py-3 md:px-6 uppercase font-['Montserrat'] text-sm md:text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-[#000080]"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="border border-[#000080] bg-[#000080] py-2 px-4 md:py-3 md:px-6 uppercase font-['Montserrat'] text-sm md:text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-[#000080] flex-shrink-0 whitespace-nowrap"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <Link to="/initiatives">DONATE NOW</Link>
               </motion.div>
@@ -200,15 +220,21 @@ const Navbar = () => {
 
           <div
             onClick={() => setIsOpen(!isOpen)}
-            className="z-[2000] block transition-colors duration-700 ease-linear lg:hidden relative w-6 h-3"
+            className="z-[2000] block lg:hidden relative w-6 h-4 flex-shrink-0"
+            aria-label="Toggle menu"
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") setIsOpen((s) => !s);
+            }}
           >
-            <motion.div
+            <motion.span
               animate={controller1}
-              className="absolute top-0 left-0 h-0.5 w-6 z-[2000] bg-gray-600"
+              className="absolute left-0 top-0 h-0.5 w-6 bg-gray-600 block"
             />
-            <motion.div
+            <motion.span
               animate={controller2}
-              className="absolute bottom-0 left-0 h-0.5 w-6 z-[2000] bg-gray-600"
+              className="absolute left-0 bottom-0 h-0.5 w-6 bg-gray-600 block"
             />
           </div>
         </div>
@@ -220,39 +246,52 @@ const Navbar = () => {
               animate="open"
               exit="closed"
               variants={menuVariants}
-              className="lg:hidden fixed top-0 left-0 right-0 bottom-0 bg-white z-50"
+              className="lg:hidden fixed inset-0 bg-white z-50"
             >
               <motion.div className="flex flex-col gap-6 items-center justify-center w-full h-full">
-                {NavItems.map((navItem, index) => (
-                  <motion.div
-                    key={navItem.id}
-                    variants={menuItemVariants}
-                    custom={index}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <a
-                      href={navItem.path}
-                      className={`py-2 font-medium text-2xl ${
-                        pathname === navItem.path
-                          ? "text-[#000080]"
-                          : "text-gray-600"
-                      }`}
-                      onClick={() => {
-                        setIsOpen(false);
-                        setPathname(navItem.path);
-                      }}
+                {NavItems.map((navItem, index) => {
+                  const isExternal = !!navItem.external || /^https?:\/\//.test(navItem.path);
+                  return (
+                    <motion.div
+                      key={navItem.id}
+                      variants={menuItemVariants}
+                      custom={index}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.97 }}
                     >
-                      {navItem.name}
-                    </a>
-                  </motion.div>
-                ))}
+                      {isExternal ? (
+                        <a
+                          href={navItem.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="py-2 text-2xl text-gray-700"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {navItem.name}
+                        </a>
+                      ) : (
+                        <a
+                          href={navItem.path}
+                          className={`py-2 text-2xl ${
+                            pathname === navItem.path ? "text-[#000080]" : "text-gray-700"
+                          }`}
+                          onClick={() => {
+                            setIsOpen(false);
+                            setPathname(navItem.path);
+                          }}
+                        >
+                          {navItem.name}
+                        </a>
+                      )}
+                    </motion.div>
+                  );
+                })}
+
                 <motion.a
                   href="/initiatives"
-                  rel="noopener noreferrer"
-                  className="border border-[#000080] bg-[#000080] py-2 px-4 md:py-3 md:px-6 uppercase font-['Montserrat'] text-sm md:text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-[#000080]"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  className="border border-[#000080] bg-[#000080] py-2 px-6 uppercase font-['Montserrat'] text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-[#000080]"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
                 >
                   DONATE NOW
                 </motion.a>
