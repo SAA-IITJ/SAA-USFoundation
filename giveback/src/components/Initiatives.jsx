@@ -151,6 +151,78 @@ const cardsData = [
       { label: "Cheque /Draft", link: "/whydonate" }
     ]
   },
+  {
+    title: "Unrestricted Fund",
+    content: `
+      <p>The Unrestricted Fund enables the IIT Jodhpur North America Foundation to allocate contributions to areas of greatest need within its approved and proposed activities.</p>
+      <br/>
+      <b>Why it matters:</b>
+      <ul style="margin-left: 20px; padding-top: 10px;">
+        <li><b>Agility:</b> Responds swiftly to emerging priorities.</li>
+        <li><b>Impact:</b> Strengthens initiatives across academic, research, and student-centric endeavors.</li>
+        <li><b>Flexibility:</b> Empowers the Foundation to address the Institute's most pressing requirements.</li>
+      </ul>
+    `,
+    imageSrc: "./assets/iitj14.png",
+    buttons: [
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
+      { label: "Cheque /Draft", link: "/whydonate" }
+    ]
+  },
+  {
+    title: "Student Travel Award for Internships & Research",
+    content: `
+      <p>This fund supports undergraduate students of IIT Jodhpur in pursuing international academic and research internships of three months or longer at reputable institutions in North America.</p>
+      <br/>
+      <b>Impact:</b>
+      <ul style="margin-left: 20px; padding-top: 10px;">
+        <li>Provides travel support for students securing North American internships.</li>
+        <li>Enhances global exposure and academic growth for young scholars.</li>
+        <li>Reduces financial barriers to world-class research engagement.</li>
+      </ul>
+    `,
+    imageSrc: "./assets/carousel1.jpg",
+    buttons: [
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
+      { label: "Cheque /Draft", link: "/whydonate" }
+    ]
+  },
+  {
+    title: "Post-Graduate Student Exchange Enabling Grant",
+    content: `
+      <p>This grant offers subsistence support to postgraduate and Ph.D. students for research work (up to one semester) at recognized North American institutions.</p>
+      <br/>
+      <b>Goals:</b>
+      <ul style="margin-left: 20px; padding-top: 10px;">
+        <li>Facilitates collaborative research and developmental opportunities.</li>
+        <li>Expands international academic engagement for advanced-level scholars.</li>
+        <li>Supports PhD candidates in accessing global laboratory resources.</li>
+      </ul>
+    `,
+    imageSrc: "./assets/card1.jpg",
+    buttons: [
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
+      { label: "Cheque /Draft", link: "/whydonate" }
+    ]
+  },
+  {
+    title: "International Faculty Visit Enabling Grant",
+    content: `
+      <p>Support travel expenses for distinguished faculty from leading North American institutions to visit IIT Jodhpur for teaching and collaborative research.</p>
+      <br/>
+      <b>Benefits:</b>
+      <ul style="margin-left: 20px; padding-top: 10px;">
+        <li>Brings world-class expertise directly to the IIT Jodhpur campus.</li>
+        <li>Fosters long-term international research partnerships.</li>
+        <li>Enriches the academic curriculum through global perspectives.</li>
+      </ul>
+    `,
+    imageSrc: "./assets/carousel1.jpg",
+    buttons: [
+      { label: "Debit/Credit Card/Online Banking", link: "/whydonate" },
+      { label: "Cheque /Draft", link: "/whydonate" }
+    ]
+  }
   ];
 // MenuItem component
 const MenuItem = ({ text, isActive, onClick }) => (
@@ -199,6 +271,11 @@ const LGiving = () => (
   <DonationCards cardsData = {cardsData.slice(7, 8)}/>
 );
 
+const Unrestricted = () => <DonationCards cardsData={cardsData.slice(8, 9)}/>;
+const TravelAward = () => <DonationCards cardsData={cardsData.slice(9, 10)}/>;
+const PGExchange = () => <DonationCards cardsData={cardsData.slice(10, 11)}/>;
+const FacultyVisit = () => <DonationCards cardsData={cardsData.slice(11, 12)}/>;
+
 // Continue with other campaign components...
 
 // Mapping sections to components
@@ -211,6 +288,10 @@ const sections = {
   'Alumni Engagement and Community Building': AECBuild,
   'Innovation and Entrepreneurship Fund': IEFund,
   'Legacy Giving': LGiving,
+  'Unrestricted Fund': Unrestricted,
+  'Student Travel Award': TravelAward,
+  'Post-Graduate Exchange Grant': PGExchange,
+  'International Faculty Visit Grant': FacultyVisit,
 };
 
 const AboutIITJFoundation = () => {
